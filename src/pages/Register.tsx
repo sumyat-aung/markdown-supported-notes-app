@@ -1,7 +1,10 @@
 import React, { useContext } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 import { context } from "../context/Context";
 import { Value } from "../types/types";
+
+import "react-toastify/dist/ReactToastify.css";
 
 // * FC
 const Register: React.FC = () => {
@@ -84,6 +87,19 @@ const Register: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <ToastContainer
+        position="top-center"
+        autoClose={1500}
+        hideProgressBar
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </>
   );
 };
