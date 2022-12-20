@@ -16,7 +16,7 @@ const Register: React.FC = () => {
   return (
     <>
       <div className="w-[100vw] h-[100vh] bg-green flex justify-center items-center">
-        <div className="bg-white rounded flex shadow items-center flex-col w-[350px] sm:w-[500px] ">
+        <div className="bg-white rounded flex shadow items-center flex-col w-[330px] sm:w-[500px] ">
           <div className="text-green text-2xl sm:text-4xl py-5 w-full px-4 flex flex-col justify-center font-DM">
             Welcome To Mindmap !
             <h4 className="text-green  text-sm font-DM_sans">
