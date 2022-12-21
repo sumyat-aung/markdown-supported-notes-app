@@ -9,14 +9,21 @@ const App: React.FC = () => {
   ////jsx
   return (
     <>
-      <div className="text-blue-800">
+      <div>
         <Routes>
           <Route
             path={"/"}
             element={
-              !localStorage.getItem("accountData") ? <Register /> : <Home />
+              !localStorage.getItem("user-name") &&
+              !localStorage.getItem("user-image") ? (
+                <Register />
+              ) : (
+                <Home />
+              )
             }
           />
+          <Route path="/new-note" element={<h1>new</h1>} />
+          <Route path="/edit-note" element={<h1>edit</h1>} />
         </Routes>
       </div>
     </>

@@ -4,6 +4,12 @@ export type userDataObj = {
     imgFile: File | null;
 }
 
+// userData type (after geting it from localstorage)
+export type userObj = {
+    userName: string;
+    imgFile: string | ArrayBuffer | null;
+};
+
 // context value type 
 export type Value = {
     accountData: userDataObj;

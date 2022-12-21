@@ -8,18 +8,27 @@ export const context = createContext<Value | null>(null);
 
 // * FC
 export const ContextProvider = (props: { children: ReactNode }) => {
-  // accountData state to handle 2 input
+  // ! accountData state to handle 2 input
   const [accountData, setAccountData] = useState<userDataObj>({
     userName: "",
     imgFile: null,
   });
 
-  // when user click register button
+  // ! when user click register button
   const OnSubmitHandle = () => {
-    if (accountData.userName) {
-      localStorage.setItem("accountData", JSON.stringify(accountData));
+    // ? checking state onSubmit
+    if (accountData.imgFile && accountData.userName) {
       window.location.reload();
-    } else {
+      localStorage.setItem("user-name", accountData.userName);
+      const fileReader = new FileReader();
+      fileReader.onload = () => {
+        const dataUrl = fileReader.result as string;
+        localStorage.setItem("user-image", dataUrl);
+      };
+      fileReader.readAsDataURL(accountData.imgFile);
+    }
+    // ? if state is empty
+    else {
       toast.error("Please, Fill Out The Form!", {
         position: "top-center",
         autoClose: 1500,
@@ -32,6 +41,8 @@ export const ContextProvider = (props: { children: ReactNode }) => {
       });
     }
   };
+
+  // ! the rest
 
   ////jsx
   return (

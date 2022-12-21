@@ -5,13 +5,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        green: "#798C71",
+        ora: "#F0A180",
+        darkOra: "#AB3814",
+        ora2: "#ED7E4F",
       },
     },
 
     fontFamily: {
       DM: ["'DM Serif Display'", "serif"],
       DM_sans: ["'DM Sans'", "sans-serif"],
+      Alge: ["'Alegreya'", "serif"],
     },
   },
   plugins: [],
