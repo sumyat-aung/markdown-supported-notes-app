@@ -15,4 +15,12 @@ export type Value = {
     accountData: userDataObj;
     setAccountData: React.Dispatch<React.SetStateAction<userDataObj>>;
     OnSubmitHandle: () => void;
+    CreateNoteSubmitHandle: ({ id, title, body }: NoteType) => void;
+    notes: NoteType[]
 };
+
+export type NoteType = {
+    id: string;
+    title: string;
+    body: string;
+}

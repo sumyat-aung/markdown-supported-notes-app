@@ -1,7 +1,8 @@
 import { createContext, useState, ReactNode } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
+import { useLocalStorage } from "../custom-hooks/useLocalStorage";
 
-import { userDataObj, Value } from "../types/types";
+import { userDataObj, Value, NoteType } from "../types/types";
 
 // Create the context
 export const context = createContext<Value | null>(null);
@@ -42,7 +43,15 @@ export const ContextProvider = (props: { children: ReactNode }) => {
     }
   };
 
-  // ! the rest
+  // ! notes
+  const [notes, setnotes] = useLocalStorage<NoteType[]>("NOTES", []);
+
+  // * creating note handling
+  const CreateNoteSubmitHandle = ({ id, title, body }: NoteType) => {
+    setnotes((prev) => [...prev, { id: id, title: title, body: body }]);
+  };
+
+  console.log(notes);
 
   ////jsx
   return (
@@ -51,6 +60,8 @@ export const ContextProvider = (props: { children: ReactNode }) => {
         accountData,
         setAccountData,
         OnSubmitHandle,
+        CreateNoteSubmitHandle,
+        notes,
       }}
     >
       {props.children}

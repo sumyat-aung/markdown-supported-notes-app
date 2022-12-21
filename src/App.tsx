@@ -1,8 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
 import Register from "./pages/Register";
+import Home from "./pages/Home";
+import NewNote from "./pages/NewNote";
 
 // * FC
 const App: React.FC = () => {
@@ -22,7 +23,7 @@ const App: React.FC = () => {
               )
             }
           />
-          <Route path="/new-note" element={<h1>new</h1>} />
+          <Route path="/new-note" element={<NewNote />} />
           <Route path="/edit-note" element={<h1>edit</h1>} />
         </Routes>
       </div>

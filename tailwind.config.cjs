@@ -15,6 +15,7 @@ module.exports = {
       DM: ["'DM Serif Display'", "serif"],
       DM_sans: ["'DM Sans'", "sans-serif"],
       Alge: ["'Alegreya'", "serif"],
+      roboto: ["'Roboto Mono'", "monospace"],
     },
   },
   plugins: [],
