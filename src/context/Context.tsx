@@ -53,6 +53,10 @@ export const ContextProvider = (props: { children: ReactNode }) => {
 
   console.log(notes);
 
+  // * delete note
+  const deleteNote = (id: string) => {
+    setnotes((prev) => prev?.filter((note) => note.id !== id));
+  };
   ////jsx
   return (
     <context.Provider
@@ -62,6 +66,7 @@ export const ContextProvider = (props: { children: ReactNode }) => {
         OnSubmitHandle,
         CreateNoteSubmitHandle,
         notes,
+        deleteNote,
       }}
     >
       {props.children}

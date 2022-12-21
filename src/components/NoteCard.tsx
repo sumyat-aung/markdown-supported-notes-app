@@ -4,10 +4,21 @@ import { context } from "../context/Context";
 import { Value } from "../types/types";
 
 const NoteCard: React.FC = () => {
-  const { notes } = useContext(context) as Value;
+  const { notes, deleteNote } = useContext(context) as Value;
 
   return (
     <div className="flex flex-col mt-10 w-full">
+      {notes?.length <= 0 && (
+        <div>
+          <div className="text-darkOra text-2xl sm:text-4xl py-5 w-full px-4 flex flex-col justify-center font-DM">
+            Welcome To Mindmap !
+            <h4 className="text-darkOra  text-sm font-DM_sans">
+              Your go-to app for boosting productivity through organized
+              note-taking.
+            </h4>
+          </div>
+        </div>
+      )}
       {notes?.map((note) => {
         return (
           <div
@@ -30,7 +41,10 @@ const NoteCard: React.FC = () => {
                 Edit Note
                 <i className="fa-solid fa-pen-to-square ml-2"></i>
               </Link>
-              <button className="border rounded-lg px-3 py-1 text-sm bg-ora2 text-white flex justify-center items-center  hover:bg-ora">
+              <button
+                className="border rounded-lg px-3 py-1 text-sm bg-ora2 text-white flex justify-center items-center  hover:bg-ora"
+                onClick={() => deleteNote(note.id)}
+              >
                 Delete Note
                 <i className="fa-solid fa-trash ml-2"></i>
               </button>

@@ -16,7 +16,8 @@ export type Value = {
     setAccountData: React.Dispatch<React.SetStateAction<userDataObj>>;
     OnSubmitHandle: () => void;
     CreateNoteSubmitHandle: ({ id, title, body }: NoteType) => void;
-    notes: NoteType[]
+    notes: NoteType[];
+    deleteNote: (id: string) => void;
 };
 
 export type NoteType = {
