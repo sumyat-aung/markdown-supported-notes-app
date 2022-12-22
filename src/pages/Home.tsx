@@ -12,7 +12,7 @@ const Home: React.FC = () => {
         <div className="lg:w-[1000px] md:w-[700px] w-[95%] pt-10">
           <Link
             to={"/new-note"}
-            className="py-4 px-8 rounded-lg bg-darkOra text-white font-DM_sans w-full text-xl active:scale-[0.99] inline-block text-center hover:bg-orange-700"
+            className="py-4 px-8 rounded-lg bg-darkOra text-white font-DM_sans w-full text-xl active:scale-[0.99] inline-block text-center hover:bg-ora2"
           >
             Add New Note
           </Link>

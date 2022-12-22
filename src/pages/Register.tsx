@@ -35,7 +35,7 @@ const Register: React.FC = () => {
                 />
               ) : (
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRqWUuxazMU3ombQX-LCxbaxLx8zNxwtq9nWvDFspVyRpbrPnmBIJ-R7FLlAoxltqwNMw&usqp=CAU"
+                  src="https://i.pinimg.com/170x/ce/b7/31/ceb731ddfc47f630168f1798a1c09e48.jpg"
                   alt="User photo"
                   className="w-[130px] h-[130px] rounded-full object-cover border text-green"
                 />
@@ -63,7 +63,7 @@ const Register: React.FC = () => {
             </div>
             <input
               type="text"
-              className="focus:outline-none w-full  px-5 py-2 font-sans text-lg  border-ora border-b mt-8 focus:border-b-2 font-DM_sans font-semibold text-darkOra  tracking-wide"
+              className="focus:outline-none w-full  px-5 py-2 font-sans text-lg  border-ora2 border-b mt-8 focus:border-b-2 font-DM_sans font-semibold text-darkOra  tracking-wide"
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setAccountData((prev) => {
                   return {
@@ -78,7 +78,7 @@ const Register: React.FC = () => {
             <div className="w-full flex justify-center mt-5">
               <button
                 type="button"
-                className="font-bold  mt-4 py-1 bg-darkOra cursor-default sm:cursor-pointer text-white tracking-widest border px-5 text-center hover:bg-[#ac5631] rounded-md font-DM_sans"
+                className="font-bold  mt-4 py-1 bg-darkOra cursor-default sm:cursor-pointer text-white tracking-widest border px-5 text-center hover:bg-ora2 rounded-md font-DM_sans"
                 onClick={OnSubmitHandle}
               >
                 Register

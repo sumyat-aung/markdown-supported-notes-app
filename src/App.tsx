@@ -4,6 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
 import NewNote from "./pages/NewNote";
+import EditNote from "./pages/EditNote";
+import NoteDetails from "./pages/NoteDetails";
 
 // * FC
 const App: React.FC = () => {
@@ -24,7 +26,8 @@ const App: React.FC = () => {
             }
           />
           <Route path="/new-note" element={<NewNote />} />
-          <Route path="/edit-note" element={<h1>edit</h1>} />
+          <Route path="/note/:id" element={<NoteDetails />} />
+          <Route path="/edit-note/:id" element={<EditNote />} />
         </Routes>
       </div>
     </>

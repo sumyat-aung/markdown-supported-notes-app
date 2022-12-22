@@ -5,7 +5,7 @@ import NoteForm from "../components/NoteForm";
 const NewNote: React.FC = () => {
   return (
     <div>
-      <div className="flex justify-around border-b-2 border-slate-50">
+      <div className="flex justify-around shadow">
         <div className="text-darkOra text-2xl sm:text-4xl py-5 :px-4 flex flex-col justify-center font-DM">
           Mindmap
           <h4 className="text-darkOra  text-sm font-DM_sans sm:inline-block hidden">
@@ -16,7 +16,7 @@ const NewNote: React.FC = () => {
           New Note
         </p>
       </div>
-      <NoteForm />
+      <NoteForm id={""} title={""} body={""} />
     </div>
   );
 };

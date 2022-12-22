@@ -46,12 +46,21 @@ export const ContextProvider = (props: { children: ReactNode }) => {
   // ! notes
   const [notes, setnotes] = useLocalStorage<NoteType[]>("NOTES", []);
 
+  // * updating by (deleting first index of same id)
+  function updateNotes(notes: NoteType[], id: string) {
+    for (const note of notes) {
+      if (note.id === id) {
+        notes.splice(notes.indexOf(note), 1);
+        break;
+      }
+    }
+  }
+
   // * creating note handling
   const CreateNoteSubmitHandle = ({ id, title, body }: NoteType) => {
+    updateNotes(notes, id);
     setnotes((prev) => [...prev, { id: id, title: title, body: body }]);
   };
-
-  console.log(notes);
 
   // * delete note
   const deleteNote = (id: string) => {

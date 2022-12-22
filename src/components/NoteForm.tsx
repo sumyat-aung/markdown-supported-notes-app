@@ -1,11 +1,12 @@
 import React, { FormEvent, useContext, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { nanoid } from "nanoid";
 
 import { context } from "../context/Context";
-import { Value } from "../types/types";
+import { NoteType, Value } from "../types/types";
 import { toast, ToastContainer } from "react-toastify";
 
-const NoteForm: React.FC = () => {
+const NoteForm: React.FC<NoteType> = ({ title, body, id }) => {
   const titleRef = useRef<HTMLInputElement>(null);
   const bodyRef = useRef<HTMLTextAreaElement>(null);
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ const NoteForm: React.FC = () => {
 
     if (titleRef.current!.value && bodyRef.current!.value) {
       CreateNoteSubmitHandle({
-        id: Date.now().toString(),
+        id: id || nanoid(),
         title: titleRef.current!.value,
         body: bodyRef.current!.value,
       });
@@ -51,7 +52,8 @@ const NoteForm: React.FC = () => {
               ref={titleRef}
               placeholder="title"
               id="title"
-              className="focus:outline-none border border-gray-600 rounded-md px-2 py-2 font-roboto font-bold"
+              className="focus:outline-none border border-gray-600 rounded-md px-2 py-2 font-roboto font-bold bg-[#E7F6F2]"
+              defaultValue={title}
             />
 
             <label
@@ -63,7 +65,8 @@ const NoteForm: React.FC = () => {
             <textarea
               id="body"
               ref={bodyRef}
-              className="h-[500px] focus:outline-none border border-gray-600 rounded-md px-2 py-2 font-roboto font-bold"
+              defaultValue={body}
+              className="h-[500px] focus:outline-none border border-gray-600 rounded-md px-2 py-2 font-roboto font-bold bg-[#E7F6F2]"
               placeholder="u write stuff here"
             ></textarea>
             <div className="flex w-full gap-5 justify-end mt-5 ">
@@ -75,7 +78,7 @@ const NoteForm: React.FC = () => {
               </button>
               <button
                 type="button"
-                className="py-2 px-5 rounded-md border-none focus:outline-none active:scale-95 bg-red-700 text-white font-semibold tracking-wider"
+                className="py-2 px-5 rounded-md border-none focus:outline-none active:scale-95 bg-ora2 text-white font-semibold tracking-wider"
                 onClick={() => navigate("..")}
               >
                 Cancle

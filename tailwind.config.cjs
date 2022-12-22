@@ -5,9 +5,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ora: "#F0A180",
-        darkOra: "#AB3814",
-        ora2: "#ED7E4F",
+        ora: "#A5C9CA",
+        darkOra: "#434242",
+        ora2: "#2C3333",
       },
     },
 
