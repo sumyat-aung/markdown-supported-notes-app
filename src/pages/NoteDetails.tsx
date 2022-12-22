@@ -51,7 +51,7 @@ const NoteDetails: React.FC = () => {
           {detailNote[0]?.title}
         </h1>
 
-        <ReactMarkdown className="p-3 font-DM_sans text-ora2 font-semibold tracking-wider unreset">
+        <ReactMarkdown className="p-3 font-DM_sans text-ora2 tracking-wider unreset">
           {detailNote[0]?.body}
         </ReactMarkdown>
       </div>
