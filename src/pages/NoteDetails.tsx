@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import { context } from "../context/Context";
 import { Value } from "../types/types";
 
+import "../css/reset.scss";
 // * FC
 const NoteDetails: React.FC = () => {
   const { id } = useParams();
@@ -50,7 +51,7 @@ const NoteDetails: React.FC = () => {
           {detailNote[0]?.title}
         </h1>
 
-        <ReactMarkdown className="p-3   font-DM_sans text-ora2 font-semibold tracking-wider text-sm ">
+        <ReactMarkdown className="p-3 font-DM_sans text-ora2 font-semibold tracking-wider unreset">
           {detailNote[0]?.body}
         </ReactMarkdown>
       </div>

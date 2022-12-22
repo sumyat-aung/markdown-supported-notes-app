@@ -1,5 +1,5 @@
 import React, { FormEvent, useContext, useRef } from "react";
-import { Link, Outlet, Route, Routes, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { nanoid } from "nanoid";
 
 import { context } from "../context/Context";
@@ -59,23 +59,14 @@ const NoteForm: React.FC<NoteType> = ({ title, body, id }) => {
             />
 
             <div className="text-xl py-2 font-DM_sans font-semibold tracking-wide mt-5 flex">
-              {/* <Link
-                to={"markdown"}
-                className="border-r-2 inline-block pr-3 border-gray-700"
-              >
-                Markdown File
-              </Link>
-              <Link to={"quill"} className=" pl-3">
-                Quill File
-              </Link> */}
-              Text file
+              Notes Markdown Text
             </div>
             <textarea
               id="body"
               ref={bodyRef}
               defaultValue={body}
               className="h-[500px] focus:outline-none border border-gray-600 rounded-md px-2 py-2 font-roboto font-bold bg-[#E7F6F2]"
-              placeholder="Write Down What You Want To Memorize"
+              placeholder="Start Typing..."
             ></textarea>
 
             <div className="flex w-full gap-5 justify-end mt-5 ">
