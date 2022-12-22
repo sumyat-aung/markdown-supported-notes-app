@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Admin from "../Admin/Admin";
 
 import Header from "../components/Header";
 import NoteCard from "../components/NoteCard";
