@@ -19,12 +19,9 @@ export type Value = {
     CreateNoteSubmitHandle: ({ id, title, body }: NoteType) => void;
     notes: NoteType[];
     deleteNote: (id: string) => void;
-    searchTerm: string;
-    setSearch: React.Dispatch<React.SetStateAction<string>>;
-    search: (e: FormEvent) => void;
-    searchFilterNotes: NoteType[];
-    // searchEnter: boolean;
-    // setSearchEnter: React.Dispatch<React.SetStateAction<boolean>>;
+    searchTerm: any;
+    setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
+    filteredNotes: NoteType[];
 };
 
 // each note obj type 
