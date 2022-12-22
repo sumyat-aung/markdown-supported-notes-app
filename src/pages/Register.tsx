@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 
 import { context } from "../context/Context";
 import { Value } from "../types/types";

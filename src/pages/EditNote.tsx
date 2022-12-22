@@ -1,16 +1,17 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
+
 import NoteForm from "../components/NoteForm";
 import { context } from "../context/Context";
 import { Value } from "../types/types";
 
+// * FC
 const EditNote: React.FC = () => {
   const { id } = useParams();
-
   const { notes } = useContext(context) as Value;
-
   const editNote = notes.filter((note) => note.id === id);
 
+  //// jsx
   return (
     <div>
       <div className="flex justify-around shadow">

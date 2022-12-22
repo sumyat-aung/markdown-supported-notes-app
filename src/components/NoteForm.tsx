@@ -6,6 +6,7 @@ import { context } from "../context/Context";
 import { NoteType, Value } from "../types/types";
 import { toast, ToastContainer } from "react-toastify";
 
+// * FC
 const NoteForm: React.FC<NoteType> = ({ title, body, id }) => {
   const titleRef = useRef<HTMLInputElement>(null);
   const bodyRef = useRef<HTMLTextAreaElement>(null);
@@ -36,10 +37,11 @@ const NoteForm: React.FC<NoteType> = ({ title, body, id }) => {
     }
   };
 
+  //// jsx
   return (
     <>
       <div className="w-full flex justify-center items-center">
-        <div className=" w-[900px] py-5">
+        <div className=" lg:w-[900px] w-full lg:px-0 px-5 py-5">
           <form className="flex flex-col">
             <label
               htmlFor="title"
@@ -71,14 +73,14 @@ const NoteForm: React.FC<NoteType> = ({ title, body, id }) => {
             ></textarea>
             <div className="flex w-full gap-5 justify-end mt-5 ">
               <button
-                className="py-2 px-8 rounded-md border-none focus:outline-none active:scale-95  bg-darkOra text-white font-semibold tracking-wider "
+                className="py-2 px-8 rounded-md border-none focus:outline-none active:scale-95  bg-darkOra text-white font-semibold tracking-wider  cursor-default sm:cursor-pointer"
                 onClick={submitNoteForm}
               >
                 Save
               </button>
               <button
                 type="button"
-                className="py-2 px-5 rounded-md border-none focus:outline-none active:scale-95 bg-ora2 text-white font-semibold tracking-wider"
+                className="py-2 px-5 rounded-md border-none focus:outline-none active:scale-95 bg-ora2 text-white font-semibold tracking-wider cursor-default sm:cursor-pointer"
                 onClick={() => navigate("..")}
               >
                 Cancle

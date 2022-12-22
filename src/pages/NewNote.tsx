@@ -2,7 +2,9 @@ import React from "react";
 
 import NoteForm from "../components/NoteForm";
 
+// * FC
 const NewNote: React.FC = () => {
+  //// jsx
   return (
     <div>
       <div className="flex justify-around shadow">

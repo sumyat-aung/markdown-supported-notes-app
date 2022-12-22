@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode } from "react";
+import { createContext, useState, ReactNode, FormEvent } from "react";
 import { toast } from "react-toastify";
 import { useLocalStorage } from "../custom-hooks/useLocalStorage";
 
@@ -66,6 +66,23 @@ export const ContextProvider = (props: { children: ReactNode }) => {
   const deleteNote = (id: string) => {
     setnotes((prev) => prev?.filter((note) => note.id !== id));
   };
+
+  // ! Search
+  const [searchTerm, setSearch] = useState<string>("");
+  // const [searchEnter, setSearchEnter] = useState<boolean>(false);
+
+  let searchFilterNotes: NoteType[] = [];
+  const search = (e: FormEvent) => {
+    e.preventDefault();
+    if (searchTerm) {
+      // setSearchEnter(true);
+      searchFilterNotes = notes.filter((note) =>
+        note.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+      );
+      console.log(searchFilterNotes);
+    }
+  };
+
   ////jsx
   return (
     <context.Provider
@@ -76,6 +93,12 @@ export const ContextProvider = (props: { children: ReactNode }) => {
         CreateNoteSubmitHandle,
         notes,
         deleteNote,
+        searchTerm,
+        setSearch,
+        search,
+        searchFilterNotes,
+        // searchEnter,
+        // setSearchEnter,
       }}
     >
       {props.children}
