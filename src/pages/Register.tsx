@@ -15,7 +15,7 @@ const Register: React.FC = () => {
   ////jsx
   return (
     <>
-      <div className="w-[100vw] h-[100vh] bg-ora flex justify-center items-center">
+      <div className="w-[100vw] h-[100vh] bg-[#E7F6F2] flex justify-center items-center">
         <div className="bg-white rounded flex shadow items-center flex-col w-[330px] sm:w-[500px] ">
           <div className="text-darkOra text-2xl sm:text-4xl py-5 w-full px-4 flex flex-col justify-center font-DM">
             Welcome To Mindmap !

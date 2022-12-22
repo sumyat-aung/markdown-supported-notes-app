@@ -72,7 +72,7 @@ Roboto
 
 ## About
 
-> **Markdown supported** <br> **Search functionality for overloaded notes taking** <br> **Provided CRUD functionalities with easy accessible** <br> **Notes data handling with localstorage** <br> **Include the ability to be responsive to all screen sizes.**
+> **Markdown supported.** <br> **Search functionality for overloaded notes taking.** <br> **Provided CRUD functionalities with easy accessible.** <br> **Notes data handling with localstorage.** <br> **Include the ability to be responsive to all screen sizes.**
 
 <br />
 <br />
