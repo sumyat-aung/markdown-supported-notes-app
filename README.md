@@ -14,7 +14,8 @@
 <br />
 <br />
  <a href="" target="_blank">
-    <img src="./public/overview.png" width='100%' alt="Overview" />
+    <img src="./public/register.png" width='100%' alt="Overview" />
+    <img src="./public/edit.png" width='100%' alt="Overview" />
   </a>
   
   <br />

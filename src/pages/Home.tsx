@@ -9,7 +9,7 @@ import NoteCard from "../components/NoteCard";
 const Home: React.FC = () => {
   //// jsx
   return (
-    <div className="relative">
+    <div className="relative h-[100vh] border">
       <Header />
       <div className="flex justify-center items-center w-[100%]">
         <div className="lg:w-[1000px] md:w-[700px] w-[95%] pt-10">
@@ -22,7 +22,6 @@ const Home: React.FC = () => {
           <NoteCard />
         </div>
       </div>
-      <Admin />
     </div>
   );
 };

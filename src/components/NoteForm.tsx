@@ -5,6 +5,7 @@ import { nanoid } from "nanoid";
 import { context } from "../context/Context";
 import { NoteType, Value } from "../types/types";
 import { toast, ToastContainer } from "react-toastify";
+import Admin from "../Admin/Admin";
 
 // * FC
 const NoteForm: React.FC<NoteType> = ({ title, body, id }) => {
@@ -40,7 +41,7 @@ const NoteForm: React.FC<NoteType> = ({ title, body, id }) => {
   //// jsx
   return (
     <>
-      <div className="w-full flex justify-center items-center">
+      <div className="w-full flex justify-center items-center relative pb-10">
         <div className=" lg:w-[900px] w-full lg:px-0 px-5 py-5">
           <form className="flex flex-col">
             <label
@@ -86,6 +87,7 @@ const NoteForm: React.FC<NoteType> = ({ title, body, id }) => {
             </div>
           </form>
         </div>
+        <Admin />
       </div>
 
       <ToastContainer
