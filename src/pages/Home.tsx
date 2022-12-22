@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Admin from "../Admin/Admin";
 
 import Header from "../components/Header";
 import NoteCard from "../components/NoteCard";
@@ -8,7 +9,7 @@ import NoteCard from "../components/NoteCard";
 const Home: React.FC = () => {
   //// jsx
   return (
-    <div>
+    <div className="relative">
       <Header />
       <div className="flex justify-center items-center w-[100%]">
         <div className="lg:w-[1000px] md:w-[700px] w-[95%] pt-10">
@@ -21,6 +22,7 @@ const Home: React.FC = () => {
           <NoteCard />
         </div>
       </div>
+      <Admin />
     </div>
   );
 };

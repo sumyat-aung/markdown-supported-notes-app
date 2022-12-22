@@ -14,7 +14,7 @@ const NoteCard: React.FC = () => {
 
   //// jsx
   return (
-    <div className="flex flex-col mt-10 w-full">
+    <div className="flex flex-col mt-10 w-full mb-20">
       {notes?.length <= 0 && (
         <div>
           <div className="text-darkOra text-2xl sm:text-4xl py-5 w-full px-4 flex flex-col justify-center font-DM">
@@ -38,7 +38,7 @@ const NoteCard: React.FC = () => {
                 <h1 className="text-2xl font--Alge text-gray-700 tracking-wide truncate font-bold">
                   {note.title}
                 </h1>
-                <ReactMarkdown className="truncate font-DM_sans text-gray-500 font-medium h-[30px] mt-3">
+                <ReactMarkdown className="truncate font-DM_sans text-darkOra font-medium h-[30px] mt-3">
                   {note.body}
                 </ReactMarkdown>
               </div>
