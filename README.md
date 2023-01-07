@@ -5,7 +5,7 @@
    Note Taking Web App
 </h1>
 <p align="center">
- Markdown supported <a href="https://mindmapnotes.netlify.app/" target="_blank">  notes taking web app </a> built with React, Typescript </a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+ Markdown supported <a href="https://mindmapnotes.netlify.app/" target="_blank">  note taking web app </a> built with React, Typescript </a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </p>
 <br />
 
