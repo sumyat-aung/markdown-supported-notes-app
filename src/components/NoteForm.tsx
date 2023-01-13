@@ -82,7 +82,7 @@ const NoteForm: React.FC<NoteType> = ({ title, body, id }) => {
                 className="py-2 px-5 rounded-md border-none focus:outline-none active:scale-95 bg-ora2 text-white font-semibold tracking-wider cursor-default sm:cursor-pointer"
                 onClick={() => navigate("..")}
               >
-                Cancle
+                Cancel
               </button>
             </div>
           </form>
