@@ -32,7 +32,7 @@
 
 ```bash
 
- Tyescript
+ Typescript
 
  React
 
